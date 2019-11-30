@@ -84,12 +84,18 @@ printf("the bank are full\n");}
             if(a[i][j]!=1) {
              printf("please enter your Initial deposit?\n");
              scanf("%lf",&tempAmmout);   
+             if(tempAmmout>=0)
+             {
              tempAmmout=twoDigits(tempAmmout);
               a[i][j-1]=tempAmmout;
                a[i][j]=1; 
-            printf("\nyour number bank is %d and your balance is %.2lf \n",i+901,a[i][j-1]); 
-               
-                 temp++;}
+            printf("\nyour number bank is %d and your balance is %.2lf \n",i+901,a[i][j-1]);               
+                 temp++;
+             }
+              if(tempAmmout<0){  printf("\n wrong number, You can only deposit a positive number\n");
+                temp++; }
+
+                          }
 
              }
            

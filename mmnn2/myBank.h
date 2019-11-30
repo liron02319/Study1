@@ -1,3 +1,6 @@
+#ifndef _MYBANK_H_
+#define _MYBANK_H_
+
 
 // a constant definition 
 #define N 50
@@ -18,4 +21,4 @@ void addInterest(double interestRate);
 void printAccounts();
 void closeAllAccount();
 
-
+ #endif
